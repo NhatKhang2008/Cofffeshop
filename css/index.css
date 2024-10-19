@@ -1,0 +1,73 @@
+@import url(global.css);
+
+body {
+  overflow-y: hidden;
+  background-color: var(--bg-nav);
+}
+
+.fa-menu-custom {
+  color: white;
+}
+
+.nav-custom,
+.nav-custom .dropdown-menu {
+  background-color: var(--bg-nav);
+}
+
+.nav-custom a {
+  color: white;
+}
+
+.nav-custom a:hover {
+  color: rgb(214, 214, 214);
+}
+
+.nav-custom .dropdown-item:focus,
+.dropdown-item:hover {
+  color: rgb(179, 81, 6) !important;
+}
+
+.nav-custom .nav-link.active {
+  font-weight: bold;
+  color: rgb(179, 81, 6);
+}
+
+.search-menu {
+  height: 35px;
+}
+
+.submit-search {
+  background-color: rgb(179, 81, 6);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  height: fit-content;
+}
+.submit-search:hover {
+  background-color: rgb(232, 108, 12);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.carousel-inner {
+  height: calc(100vh - 60px);
+  overflow: hidden;
+}
+
+.carousel-inner .carousel-item {
+  overflow: hidden;
+  height: 100%;
+}
+
+.carousel-inner .carousel-item img {
+  object-fit: cover;
+  height: 100%;
+}
