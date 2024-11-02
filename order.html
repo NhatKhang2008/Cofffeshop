@@ -16,75 +16,110 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/order.css" />
     <title>Coffee Shop</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg nav-custom">
       <div class="container-fluid nav-container">
         <a class="navbar-brand" href="#">Logo</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fa-solid fa-bars fa-menu-custom"></i>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-between"
-          id="navbarNavDropdown"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Trang chủ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Giới thiệu</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Đồ uống
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Trà</a></li>
-                <li><a class="dropdown-item" href="#">Trà sữa</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Cà phê</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Tin tức</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
+        <form class="d-flex" role="search">
             <input
               class="form-control me-2 search-menu"
               type="search"
-              placeholder="Search"
+              placeholder="Tìm kiếm"
               aria-label="Search"
             />
             <button class="btn btn-outline-success submit-search" type="submit">
-              Tìm kiếm
+              <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-          </form>
-        </div>
+        </form>
+        <button class="login-button" type="submit">
+          Đăng nhập
+        </button>
       </div>
     </nav>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+
+    </div>
+    <div class="order-content">
+      <div class="list">
+        <div class="list-title"> Danh mục</div>
+        <div class="list-items">
+          <div class="list-item">
+            <div class="item-name">Món Nổi Bật</div>
+            <div class="item-price">50</div>
+          </div>
+          <div class="list-item">
+            <div class="item-name">Trà sữa</div>
+            <div class="item-price">50</div>
+          </div>
+          <div class="list-item">
+            <div class="item-name">Fresh Fruit Tea</div>
+            <div class="item-price">50</div>
+          </div>
+          <div class="list-item">
+            <div class="item-name">Cà Phê</div>
+            <div class="item-price">50</div>
+          </div>
+          <div class="list-item">
+            <div class="item-name">Kem</div>
+            <div class="item-price">50</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="drinks">
+        <div class="drinks-title">
+          <div class="drinks-cata">Món nổi bật</div>
+          <div class="drinks-button">
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+        </div>
+        <div class="drinks-grid">
+          <div class="drink-1">
+            <div class="drink-image"> 
+              <img src="https://tocotocotea.com/wp-content/uploads/2024/10/Sua-Tuoi-Nep-Cam.png">
+              <div class="drink-name">Sua tuoi nep cam</div>
+              <div class="drink-price">
+                <p>38000d</p>
+                <i class="fa-solid fa-plus"></i>
+              </div>
+            </div>
+          </div>
+          <div class="drink-1">
+            <div class="drink-image"> 
+              <img src="https://tocotocotea.com/wp-content/uploads/2024/10/Sua-Tuoi-Yen-Mach.png">
+              <div class="drink-name">Sua tuoi yen mach</div>
+              <div class="drink-price">
+                <p>39000d</p>
+                <i class="fa-solid fa-plus"></i>
+              </div>
+            </div>
+          </div>
+          <div class="drink-1">
+            <div class="drink-image"> 
+              <img src="https://tocotocotea.com/wp-content/uploads/2024/10/O-Long-Yen-Mach.png">
+              <div class="drink-name">O long yen mach</div>
+              <div class="drink-price">
+                <p>25000d</p>
+                <i class="fa-solid fa-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bag">
+        <div class="bag-title">
+          <div class="bag-name">Giỏ hàng của tôi</div>
+          <div class="secondary">xóa tất cả</div>
+        </div>
+        <div class="bag-content">
+          <div class="bag-image">
+            <img class="img-milktea" src="https://tocotocotea.com/wp-content/themes/tocotocotea/assets/images/icon-glass-tea.png">
+            <p class="text-price">x 0 = 0đ</p>
+          </div>
+          <button class="pay-button" type="submit">Thanh toán</button>
+        </div>
+      </div>
+    </div>
+  
