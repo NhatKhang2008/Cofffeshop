@@ -160,6 +160,7 @@ body {
   display: flex;
   flex-direction: row;
   max-width: 800px;
+  padding-bottom: 10px;
 }
 .drinks-title {
   display: flex;
