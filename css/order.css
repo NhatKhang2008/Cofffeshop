@@ -299,3 +299,10 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+
+.data-orders {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

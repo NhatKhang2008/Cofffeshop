@@ -1,47 +1,74 @@
 export const categories = [
   {
     name: "món nổi bật",
-    fruits: [
+    fruit_items: [
       {
-        name: 'Sữa tươi yến mạch',
+        id: 1,
+        name: "Sữa tươi yến mạch",
         price: 39000,
-        categorys: ['món nổi bật', 'special menu']
+        categorys: ["món nổi bật", "special menu"],
       },
       {
-        name: 'Cà phê đen đá',
+        id: 2,
+        name: "Cà phê đen đá",
         price: 18000,
-        categorys: ['món nổi bật', 'cà phê']
+        categorys: ["món nổi bật", "cà phê"],
       },
       {
-        name: 'Cà phê sữa đá',
+        id: 3,
+        name: "Cà phê sữa đá",
         price: 20000,
-        categorys: ['món nổi bật', 'cà phê']
-      }
-    ]
+        categorys: ["món nổi bật", "cà phê"],
+      },
+    ],
   },
   {
     name: "trà sữa",
-    fruits: [
+    fruit_items: [
       {
-        name: 'Sữa tươi yến mạch',
+        id: 1,
+        name: "Sữa tươi yến mạch",
         price: 39000,
-        categorys: ['món nổi bật', 'special menu']
-      }
-    ]
+        categorys: ["món nổi bật", "special menu"],
+      },
+    ],
   },
   {
     name: "cà phê",
-    fruits: [
+    fruit_items: [
       {
-        name: 'Cà phê đen đá',
+        id: 2,
+        name: "Cà phê đen đá",
         price: 18000,
-        categorys: ['món nổi bật', 'cà phê']
+        categorys: ["món nổi bật", "cà phê"],
       },
       {
-        name: 'Cà phê sữa đá',
+        id: 3,
+        name: "Cà phê sữa đá",
         price: 20000,
-        categorys: ['món nổi bật', 'cà phê']
-      }
-    ]
-  }
-]
+        categorys: ["món nổi bật", "cà phê"],
+      },
+    ],
+  },
+];
+
+export const fruits = [
+  {
+    id: 1,
+    name: "Sữa tươi yến mạch",
+    price: 39000,
+    categorys: ["món nổi bật", "special menu"],
+  },
+  {
+    id: 2,
+    name: "Cà phê đen đá",
+    price: 18000,
+    categorys: ["món nổi bật", "cà phê"],
+  },
+  {
+    id: 3,
+    name: "Cà phê sữa đá",
+    price: 20000,
+    categorys: ["món nổi bật", "cà phê"],
+  },
+];
