@@ -1,24 +1,24 @@
 export const categories = [
   {
-    name: "món nổi bật",
+    name: "Món nổi bật",
     fruit_items: [
       {
         id: 1,
         name: "Sữa tươi yến mạch",
         price: 39000,
-        categorys: ["món nổi bật", "special menu"],
+        categorys: ["Món nổi bật", "Special menu"],
       },
       {
         id: 2,
         name: "Cà phê đen đá",
         price: 18000,
-        categorys: ["món nổi bật", "cà phê"],
+        categorys: ["Món nổi bật", "Cà phê"],
       },
       {
         id: 3,
         name: "Cà phê sữa đá",
         price: 20000,
-        categorys: ["món nổi bật", "cà phê"],
+        categorys: ["Món nổi bật", "Cà phê"],
       },
     ],
   },
@@ -29,24 +29,24 @@ export const categories = [
         id: 1,
         name: "Sữa tươi yến mạch",
         price: 39000,
-        categorys: ["món nổi bật", "special menu"],
+        categorys: ["Món nổi bật", "Special menu"],
       },
     ],
   },
   {
-    name: "cà phê",
+    name: "Cà phê",
     fruit_items: [
       {
         id: 2,
         name: "Cà phê đen đá",
         price: 18000,
-        categorys: ["món nổi bật", "cà phê"],
+        categorys: ["Món nổi bật", "Cà phê"],
       },
       {
         id: 3,
         name: "Cà phê sữa đá",
         price: 20000,
-        categorys: ["món nổi bật", "cà phê"],
+        categorys: ["Món nổi bật", "Cà phê"],
       },
     ],
   },
@@ -57,18 +57,18 @@ export const fruits = [
     id: 1,
     name: "Sữa tươi yến mạch",
     price: 39000,
-    categorys: ["món nổi bật", "special menu"],
+    categorys: ["Món nổi bật", "Special menu"],
   },
   {
     id: 2,
     name: "Cà phê đen đá",
     price: 18000,
-    categorys: ["món nổi bật", "cà phê"],
+    categorys: ["Món nổi bật", "Cà phê"],
   },
   {
     id: 3,
     name: "Cà phê sữa đá",
     price: 20000,
-    categorys: ["món nổi bật", "cà phê"],
+    categorys: ["Món nổi bật", "Cà phê"],
   },
 ];

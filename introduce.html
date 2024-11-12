@@ -16,75 +16,147 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/introduce.css" />
     <title>Coffee Shop</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg nav-custom">  
+    <nav class="navbar navbar-expand-lg nav-custom">
       <div class="container-fluid nav-container">
         <a class="navbar-brand" href="#">Logo</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fa-solid fa-bars fa-menu-custom"></i>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-between"
-          id="navbarNavDropdown"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Trang chủ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Giới thiệu</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Đồ uống
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Trà</a></li>
-                <li><a class="dropdown-item" href="#">Trà sữa</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Cà phê</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Tin tức</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
+        <form class="d-flex" role="search">
             <input
               class="form-control me-2 search-menu"
               type="search"
-              placeholder="Search"
+              placeholder="Tìm kiếm"
               aria-label="Search"
             />
             <button class="btn btn-outline-success submit-search" type="submit">
-              Tìm kiếm
+              <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-          </form>
-        </div>
+        </form>
+        <button class="login-button" type="submit">
+          Đăng nhập
+        </button>
       </div>
     </nav>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    <div class="checkout-page">
+      <div class="checkout-top">
+        <div class="btn-checkout-1" type="PICK">Giao hàng tận nơi</div>
+        <div class="btn-checkout-2" type="DELI">Nhận tại cửa hàng</div>
+      </div>
+      <div class="info-checkout">
+        <div class="personal-info">
+          <div class="personal-info-title">
+            <div class="title-info">Thông tin giao hàng</div>
+            <div class="button-info"><i class="fa-solid fa-angle-down"></i></div>
+          </div>
+          <div class="personal-info-container">
+            <div class="personal-info-content">
+              <div class="info-input">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="customer-name" placeholder="Tên người nhận" >
+              </div>
+            </div>
+            <div class="personal-info-content">
+              <div class="info-input">
+                <i class="fa-solid fa-phone"></i>
+                <input type="text" id="customer-phone" placeholder="Số điện thoại người nhận" >
+              </div>
+            </div>
+            <div class="delivery-title">Giao đến</div>
+            <div class="personal-info-content">
+              <div class="info-input">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" id="customer-location" placeholder="Địa chỉ người nhận" >
+              </div>
+            </div>
+            <div class="personal-info-content">
+              <div class="info-input">
+                <i class="fa-solid fa-note-sticky"></i>
+                <input type="text" id="customer-notes" placeholder="Ghi chú địa chỉ..." >
+              </div>
+            </div>
+            <div class="method-of-payment">
+              <div class="method-of-payment-title">
+                <div class="title-info">Thông tin giao hàng</div>
+                <div class="button-info"><i class="fa-solid fa-angle-down"></i></div>
+              </div>
+              <div class="payment-content">
+                <div class="in-house">
+                  <div class="select-btn-1">.</div>
+                  <div class="text-btn-1">Thanh toán khi nhận hàng</div>
+                </div>
+                <div class="online">
+                  <div class="select-btn-2">.</div>
+                  <div class="text-btn-2">Thanh toán online</div>
+                </div>
+              </div>
+            </div>
+            <div class="delivery-date">
+              <div class="delivery-time">Giao hàng
+                <span class="time">15:25</span>
+                <span class="date"> - hôm nay 12/11/2024</span>
+              </div>
+              <div class="fix-time">Sửa</div>
+            </div>
+          </div>
+        </div>
+        <div class="order-info">
+          <div class="order-title">
+            <div class="title-info">Thông tin đơn hàng</div>
+            <div class="button-info"><i class="fa-solid fa-angle-down"></i></div>
+          </div>
+          <div class="order-info-container">
+              <div class="choose-store">
+                <div class="choose-store-title">Chọn cửa hàng</div>
+                <div class="choose-store-content">
+                   <div class="left">
+                      <i class="fa-solid fa-shop"></i>
+                   </div>
+                   <div class="right">
+                      <i class="fa-solid fa-angle-down"></i>
+                   </div>
+                </div>
+              </div>
+              <div class="promotion-code">
+                <div class="left">
+                  <img src="https://tocotocotea.com/wp-content/themes/tocotocotea/assets/images/icon-promotion.png" alt class="promotion-icon">
+                  <div class="sale">Mã khuyến mãi</div>
+                </div>
+              </div>
+              <div class="checkout-price">
+                <div class="price-top">
+                  <div class="quantity">
+                    Số lượng cốc:
+                    <span class="quantity-number">0</span>
+                    cốc
+                  </div>
+                  <div class="total">
+                    Tổng:
+                  </div>
+                </div>
+                <div class="transport-price">
+                  <div class="transport-price-number">Phí vận chuyển:</div>
+                </div>
+                <div class="promotion-amount">
+                  <div class="promotion-amount-title">Khuyến mãi:</div>
+                </div>
+                <div class="grand-total">
+                  <div class="grand-total-title">Tổng cộng:</div>
+                </div>
+              </div>
+              <div class="checkout-note">
+                <textarea type="text" placeholder="Thêm ghi chú..." class="ta-checkout-note"></textarea>
+              </div>
+              <div class="checkout-btn">
+                <div class="btn-order">ĐẶT HÀNG</div>
+                <div class="btn-continue">TIẾP TỤC MUA HÀNG</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </body>
-</html>
+    
