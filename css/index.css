@@ -9,13 +9,12 @@ body {
   color: white;
 }
 
-.nav-custom,
-.nav-custom .dropdown-menu {
-  background-color: var(--bg-nav);
+.nav-custom {
+  padding: 0;
 }
 
 .nav-custom a {
-  color: white;
+  color: black;
 }
 
 .nav-custom a:hover {
@@ -55,6 +54,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  background-color: white;
+  box-shadow: 2px 10px 0 rgba(0, 0, 0, 0.06);
 }
 
 .carousel-inner {

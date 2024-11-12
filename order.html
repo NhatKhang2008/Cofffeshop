@@ -22,7 +22,7 @@
   <body>
     <nav class="navbar navbar-expand-lg nav-custom">
       <div class="container-fluid nav-container">
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="index.html">Logo</a>
         <form class="d-flex" role="search">
             <input
               class="form-control me-2 search-menu"
@@ -44,8 +44,8 @@
     <div class="order-content">
       <div class="list">
         <div class="list-title"> Danh mục</div>
-        <div class="list-items">
-          <div class="list-item">
+        <div class="list-items" id="list-category">
+          <!-- <div class="list-item">
             <div class="item-name">Món Nổi Bật</div>
             <div class="item-price">50</div>
           </div>
@@ -64,49 +64,11 @@
           <div class="list-item">
             <div class="item-name">Kem</div>
             <div class="item-price">50</div>
-          </div>
+          </div> -->
         </div>
 
       </div>
-      <div class="drinks">
-        <div class="drinks-title">
-          <div class="drinks-cata">Món nổi bật</div>
-          <div class="drinks-button">
-            <i class="fa-solid fa-angle-down"></i>
-          </div>
-        </div>
-        <div class="drinks-grid">
-          <div class="drink-1" data-name="p-1">
-            <div class="drink-image"> 
-              <img src="https://tocotocotea.com/wp-content/uploads/2024/10/Sua-Tuoi-Nep-Cam.png">
-              <div class="drink-name">Sữa tươi nếp cẩm</div>
-              <div class="drink-price">
-                <p>38000d</p>
-                <div class="btn-increase"><i class="fa-solid fa-plus"></i></div>
-              </div>
-            </div>
-          </div>
-          <div class="drink-1" data-name="p-2">
-            <div class="drink-image"> 
-              <img src="https://tocotocotea.com/wp-content/uploads/2024/10/Sua-Tuoi-Yen-Mach.png">
-              <div class="drink-name">Sữa tươi yến mạch</div>
-              <div class="drink-price">
-                <p>39000d</p>
-                <div class="btn-increase"><i class="fa-solid fa-plus"></i></div>
-              </div>
-            </div>
-          </div>
-          <div class="drink-1" data-name="p-3">
-            <div class="drink-image"> 
-              <img src="https://tocotocotea.com/wp-content/uploads/2024/10/O-Long-Yen-Mach.png">
-              <div class="drink-name">Ô long yến mạch</div>
-              <div class="drink-price">
-                <p>25000d</p>
-                <div class="btn-increase"><i class="fa-solid fa-plus"></i></div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="container-drinks" id="data-drinks">
       </div>
       <div class="bag">
         <div class="bag-title">
@@ -130,32 +92,38 @@
             <img class="img-milktea" src="https://tocotocotea.com/wp-content/themes/tocotocotea/assets/images/icon-glass-tea.png">
             <p class="text-price">x 0 = 0đ</p>
           </div>
-          <button class="pay-button" type="submit">Thanh toán</button>
+          <a href="payment.html" class="w-auto">
+            <button class="pay-button" type="submit">Thanh toán</button>
+          </a>
         </div>
       </div>
     </div>
-<div class="product-details">
-  <div class="preview" data-target="p-1">
-    <div class="close"><i class="fa-solid fa-x"></i></div>
-    <div class="all-popup">
-      <div class="preview-content">
-        <div class="preview-img"><img src="https://tocotocotea.com/wp-content/uploads/2024/10/Sua-Tuoi-Nep-Cam.png"></div>
-        <div class="preview-text">
-          <p class="preview-title">O long yen mach</p>
-          <p class="preview-price">25,000</p>
-          <p class="preview-des">Sự hòa quyện giữa vị dẻo thơm của yến mạch và trà ô long khói đậm vị mang lại cảm giác thư thái và bổ dưỡng.</p>
-          <div class="previews-buttons">
-            <div class="order-amounts">
-              <div class="btn-increase"><i class="fa-solid fa-minus"></i></div>
-              <p>1</p>
-              <div class="btn-increase"><i class="fa-solid fa-plus"></i></div>
-            </div>
-            <div class="show-price-button">
-              <button class="login-button" type="submit">+25,000d</button>
+    <div class="product-details">
+      <div class="preview" data-target="p-1">
+        <div class="close"><i class="fa-solid fa-x"></i></div>
+        <div class="all-popup">
+          <div class="preview-content">
+            <div class="preview-img"><img src="https://tocotocotea.com/wp-content/uploads/2024/10/Sua-Tuoi-Nep-Cam.png"></div>
+            <div class="preview-text">
+              <p class="preview-title">O long yen mach</p>
+              <p class="preview-price">25,000</p>
+              <p class="preview-des">Sự hòa quyện giữa vị dẻo thơm của yến mạch và trà ô long khói đậm vị mang lại cảm giác thư thái và bổ dưỡng.</p>
+              <div class="previews-buttons">
+                <div class="order-amounts">
+                  <div class="btn-increase"><i class="fa-solid fa-minus"></i></div>
+                  <p>1</p>
+                  <div class="btn-increase"><i class="fa-solid fa-plus"></i></div>
+                </div>
+                <div class="show-price-button">
+                  <button class="login-button" type="submit">+25,000d</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  <script src="./js/data.js" type="module"></script>
+  <script src="./js/order.js" type="module"></script>
+  </body>
+</html>
