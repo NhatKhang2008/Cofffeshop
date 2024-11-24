@@ -46,7 +46,7 @@ function listFruits() {
           <img src="https://tocotocotea.com/wp-content/uploads/2024/10/Sua-Tuoi-Nep-Cam.png" alt="${fruit.name}">
           <div class="drink-name">${fruit.name}</div>
           <div class="drink-price">
-            <p>${fruit.price}</p>
+            <p>${fruit.price}đ</p>
             <div class="btn-increase"><i class="fa-solid fa-plus"></i></div>
           </div>
         </div>

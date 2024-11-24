@@ -1,0 +1,283 @@
+@import url(global.css);
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: gray;
+    opacity: 0.7;
+}
+.popup-add-product {
+    background: #fbfbfb;
+    padding-top: 10px;
+}
+.popup {
+    z-index: 5;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 3px;
+    position: fixed;
+    padding: 40px 0px 10px 0px;
+    display: flex;
+    justify-content: center;
+}
+.popup-title {
+    position: absolute;
+    top: 8px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    z-index: 6;
+}
+.close-btn i {
+    font-size: 24px;
+}
+.popup-content {
+    width: 100%;
+    overflow: hidden;
+}
+.popup-choose-product {
+    z-index: 2;
+    border-radius: 6px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.popup-choose-product .ss-1 {
+    display: flex;
+    padding: 0 20px;
+    padding-bottom: 12px;
+}
+.ss-1-left img {
+    width: 180px;
+    height: 180px;
+    border-radius: 6px;
+    border: 1px solid #f4f4f4;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+.ss-1-right {
+    margin-left: 16px;
+}
+.ss-1-right .product-name {
+    font-size: 18px;
+    margin-right: 16px;
+    font-weight: 600;
+}
+.ss-1-right .product-price {
+    margin-top: 16px;
+}
+.product-price {
+    display: flex;
+    align-items: flex-end;
+}
+.ss-1-right .price {
+    padding-right: 10px;
+    color: #8a733f;
+    font-weight: 600;
+}
+.ss-1-right .regular-price {
+    font-size: 12px;
+    text-decoration: line-through;
+}
+.ss-1-right .product-info {
+    padding: 10px 0;
+    color: rgba(0, 0, 0, 0.87);
+    font-style: italic;
+}
+.ss-1-right .btn-price-product {
+    background: #d8b979;
+    color: #ffffff;
+    padding: 0 20px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: unset;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.ss-1-right .change-quantity-wrap {
+    display: flex;
+}
+.ss-1-right .change-quantity-wrap .amount {
+    padding: 0 15px;
+}
+.change-quantity {
+    color: #ffffff;
+    background: #799dd9;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 0;
+    line-height: 15px;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+.align-items-center {
+    align-items: center !important;
+    display: flex !important;
+}
+.ss-2 {
+    overflow-y: scroll;
+    padding: 20px;
+    height: 50%;
+    margin-bottom: 20px;
+}
+.customize-section {
+    margin-bottom: 8px;
+}
+.customize-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 8px;
+}
+.customize-title .left {
+    font-weight: 600;
+    font-size: 16px;
+}
+.customize-content {
+    display: flex;
+    padding: 0 20px;
+    background: #ffffff;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .05);
+    border-radius: 4px;
+}
+.customize-content .container-radio {
+    width: 50%;
+}
+input[type="radio"], input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+.container-radio input:checked ~ .checkmark-radio {
+    background-color: #d8b979;
+}
+.checkmark-radio {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.checkmark-radio:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.container-radio {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+label.container-radio {
+    margin: 0 !important;
+}
+.container-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.topping-wrap {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+label.container-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+    margin-bottom: 0px;
+}
+.checkmark {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border-radius: 3px;
+    background-color: #eee;
+}
+.container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+input {
+    overflow: visible;
+}
+span.topping-price {
+    white-space: nowrap;
+}
+.container-checkbox input:checked ~ .checkmark {
+    background-color: #d8b979;
+}
+.container-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.btn-increase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .btn-increase i {
+    border-radius: 50%;
+    background: #799dd9;
+    color: #ffffff;
+    padding: 13px 7px;
+    font-weight: 600;
+    align-self: center;
+    font-size: 15px;
+    line-height: 0px;
+  }
+  .order-amounts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .order-amounts p{
+    margin-bottom: 0;
+    padding: 0 7px;
+  }

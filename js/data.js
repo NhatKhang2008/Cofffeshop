@@ -31,6 +31,18 @@ export const categories = [
         price: 39000,
         categorys: ["Món nổi bật", "Special menu"],
       },
+      {
+        id: 1,
+        name: "Sữa tươi yến mạch",
+        price: 39000,
+        categorys: ["Món nổi bật", "Special menu"],
+      },
+      {
+        id: 1,
+        name: "Sữa tươi yến mạch",
+        price: 39000,
+        categorys: ["Món nổi bật", "Special menu"],
+      },
     ],
   },
   {
@@ -45,6 +57,12 @@ export const categories = [
       {
         id: 3,
         name: "Cà phê sữa đá",
+        price: 20000,
+        categorys: ["Món nổi bật", "Cà phê"],
+      },
+      {
+        id: 3,
+        name: "Cà phê đá",
         price: 20000,
         categorys: ["Món nổi bật", "Cà phê"],
       },
