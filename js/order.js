@@ -36,14 +36,13 @@ function listFruits() {
 
     for (let j = 0; j < categories[i].fruit_items.length; j++) {
       let fruit = categories[i].fruit_items[j];
-
       const drinkItem = document.createElement("div");
       drinkItem.classList.add("drink-1");
       drinkItem.setAttribute("data-id", fruit.id); // Thêm data-name
 
       drinkItem.innerHTML = `
         <div class="drink-image"> 
-          <img src="https://tocotocotea.com/wp-content/uploads/2024/10/Sua-Tuoi-Nep-Cam.png" alt="${fruit.name}">
+          <img src="${fruit.imgUrl}" alt="${fruit.name}">
           <div class="drink-name">${fruit.name}</div>
           <div class="drink-price">
             <p>${fruit.price}đ</p>
@@ -54,10 +53,51 @@ function listFruits() {
 
       // Thêm sự kiện click vào nút cộng để lấy data của item
       const btnIncrease = drinkItem.querySelector(".btn-increase");
+      // btnIncrease.addEventListener("click", () => {
+      //   const closePopup = document.getElementsByClassName("wrap-popup")[0];
+      //   closePopup.setAttribute("style", "display:block");
+      //   const fruitImgUrl = document.getElementById("fruit-img");
+      //   const fruitName = document.getElementById("fruit-name");
+      //   const fruitPrice = document.getElementById("fruit-price");
+      //   const fruitInfor = document.getElementById("fruit-infor");
+      //   fruitImgUrl.src = fruit.imgUrl;
+      //   fruitName.textContent = fruit.name;
+      //   fruitPrice.textContent = fruit.price;
+      //   fruitInfor.textContent = fruit.name;
+
+      // localStorage.setItem("fruitSelect", JSON.stringify(fruit));
+      // const itemId = drinkItem.getAttribute("data-id");
+      // console.log("Item Id:", itemId);
+      // addToOrderList(itemId, fruit);
+      // });
       btnIncrease.addEventListener("click", () => {
-        const itemId = drinkItem.getAttribute("data-id");
-        console.log("Item Id:", itemId);
-        addToOrderList(itemId, fruit);
+        const popupWrapper = document.querySelector(".wrap-popup");
+        popupWrapper.style.display = "block";
+        const fruitImgUrl = document.getElementById("fruit-img"); // Hiển thị popup
+        const fruitName = document.getElementById("fruit-name");
+        const fruitPrice = document.getElementById("fruit-price");
+        const fruitInfor = document.getElementById("fruit-infor");
+
+        // Cập nhật nội dung popup
+        fruitImgUrl.src = fruit.imgUrl;
+        fruitName.textContent = fruit.name;
+        fruitPrice.textContent = fruit.price;
+        fruitInfor.textContent = fruit.description || "Không có mô tả.";
+        const addFruitCart = document.getElementById("add-fruit-cart");
+        addFruitCart.addEventListener("click", () => {
+          const itemId = drinkItem.getAttribute("data-id");
+          console.log("Thêm", {
+            itemId,
+            fruit,
+          });
+          addToOrderList(itemId, fruit);
+          // popupWrapper.style.display = "none";
+        });
+        // Đóng popup khi nhấn nút close
+        const closeButton = document.getElementById("close-btn");
+        closeButton.addEventListener("click", () => {
+          popupWrapper.style.display = "none";
+        });
       });
 
       // Thêm drinkItem vào drinkGrid
@@ -142,13 +182,9 @@ function updateQuantity(id, change) {
 
 // Hàm thêm item vào orderList hoặc tăng quantity nếu đã tồn tại
 function addToOrderList(itemId, fruitData) {
-  console.log("Item Id:", itemId, fruitData);
   const existingOrder = orderList.find((order) => {
-    console.log(order);
     return order.fruit.id == itemId;
   });
-  console.log("Existing Order:", existingOrder);
-
   if (existingOrder) {
     // Nếu sản phẩm đã tồn tại trong orderList, tăng quantity
     existingOrder.quantity += 1;
@@ -173,6 +209,11 @@ deletedAll.addEventListener("click", () => {
   listOrder();
 });
 
+const closePopup = document.getElementById("close-btn");
+closePopup.addEventListener("click", () => {
+  const closePopup = document.getElementsByClassName("wrap-popup")[0];
+  closePopup.setAttribute("style", "display:none");
+});
 // Khởi chạy hàm listOrder để hiển thị danh sách order
 listOrder();
 listCategories();

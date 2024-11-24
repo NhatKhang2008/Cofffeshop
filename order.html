@@ -17,6 +17,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/order.css" />
+    <link rel="stylesheet" href="/css/detail.css">
     <title>Coffee Shop</title>
   </head>
   <body>
@@ -87,30 +88,175 @@
         </div>
       </div>
     </div>
-    <div class="product-details">
-      <div class="preview" data-target="p-1">
-        <div class="close"><i class="fa-solid fa-x"></i></div>
-        <div class="all-popup">
-          <div class="preview-content">
-            <div class="preview-img"><img src="https://tocotocotea.com/wp-content/uploads/2024/10/Sua-Tuoi-Nep-Cam.png"></div>
-            <div class="preview-text">
-              <p class="preview-title">O long yen mach</p>
-              <p class="preview-price">25,000</p>
-              <p class="preview-des">Sự hòa quyện giữa vị dẻo thơm của yến mạch và trà ô long khói đậm vị mang lại cảm giác thư thái và bổ dưỡng.</p>
-              <div class="previews-buttons">
-                <div class="order-amounts">
+    <div class="wrap-popup" scroll="no">
+      <div class="popup popup-add-product" style="width: 650px; height: 650px; top: calc(50% - 250px); left: calc(50% - 325px);">
+        <div class="popup-title"></div>
+        <div class="close-btn" id="close-btn"><i class="fas fa-times"></i></div>
+        <div class="popup-content">
+          <div class="popup-choose-product">
+          <div class="ss-1 product-infomation">
+            <div class="ss-1-left">
+              <img id="fruit-img" src="https://tocotocotea.com/wp-content/uploads/2024/11/z6050430969392_bf7c447cf1f9854b92d6c9400bce07b6.jpg" alt="">
+            </div>
+            <div class="ss-1-right">
+              <div  class="product-name" id="fruit-name"></div>
+              <div class="product-price">
+                <div class="price" id="fruit-price"></div>
+              </div>
+              <div id="fruit-infor" class="product-info"></div>
+              <div class="wrap-quantity d-flex align-items-center">
+                <!-- <div class="order-amounts">
                   <div class="btn-increase"><i class="fa-solid fa-minus"></i></div>
                   <p>1</p>
                   <div class="btn-increase"><i class="fa-solid fa-plus"></i></div>
-                </div>
-                <div class="show-price-button">
-                  <button class="login-button" type="submit">+25,000d</button>
-                </div>
+                </div> -->
+                <div class="btn-price-product" id="add-fruit-cart">Thêm vào giỏ</div>
               </div>
             </div>
           </div>
+          <div class="ss-2 product-customize">
+            <div class="customize-section type">
+              <div class="customize-title">
+                <div class="left">Chọn loại</div>
+                <div class="right">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </div>
+              <div class="customize-content">
+              <label class="container-radio">
+                <span>Lạnh</span>
+                <input type="radio" checked="" value="cold" name="type">
+                <span class="checkmark-radio"></span>
+              </label>
+              <label class="container-radio">
+                <span>Nóng</span>
+                <input type="radio" checked="" value="hot" name="type">
+                <span class="checkmark-radio"></span>
+              </label>
+          </div>
+            </div>
+            <div class="customize-section comboM" style="display: none;">
+              <div class="customize-title">
+                <div class="left">Chọn món size M</div>
+                <div class="right">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </div>
+              <div class="customize-content">
+              </div>
+            </div>
+            <div class="customize-section comboL" style="display: none;">
+              <div class="customize-title">
+                <div class="left">Chọn món size L</div>
+                <div class="right">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </div>
+              <div class="customize-content">
+              </div>
+            </div>
+            <div class="customize-section size">
+              <div class="customize-title">
+                <div class="left">Chọn size</div>
+                <div class="right">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </div>
+              <div class="customize-content">
+              <label class="container-radio">
+            <span>Size 1 LÍT</span>
+            <input type="radio" checked=""  name="size">
+            <span class="checkmark-radio"></span>
+          </label></div>
+            </div>
+            <div class="customize-section sugar">
+              <div class="customize-title">
+                <div class="left">Chọn đường</div>
+                <div class="right">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </div>
+              <div class="customize-content">
+              <label class="container-radio">
+                <span>100% đường</span>
+                <input type="radio" checked="" name="sugar" >
+                <span class="checkmark-radio"></span>
+              </label>
+              <label class="container-radio">
+                <span>Ít đường</span>
+                <input type="radio" name="sugar" >
+                <span class="checkmark-radio"></span>
+              </label><label class="container-radio">
+                <span>Không đường</span>
+                <input type="radio" name="sugar" >
+                <span class="checkmark-radio"></span>
+              </label></div>
+            </div>
+            <div class="customize-section ice">
+              <div class="customize-title">
+                <div class="left">Chọn đá</div>
+                <div class="right">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </div>
+              <div class="customize-content">
+              <label class="container-radio">
+                <span>100% đá</span>
+                <input type="radio" checked="" name="ice" >
+                <span class="checkmark-radio"></span>
+              </label><label class="container-radio">
+                <span>Ít đá</span>
+                <input type="radio" name="ice" >
+                <span class="checkmark-radio"></span>
+              </label><label class="container-radio">
+                <span>Không đá</span>
+                <input type="radio" name="ice" >
+                <span class="checkmark-radio"></span>
+              </label></div>
+            </div>
+            <div class="customize-section topping">
+              <div class="customize-title">
+                <div class="left">Chọn topping</div>
+                <div class="right">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </div>
+              <div class="customize-content">
+              <div class="topping-wrap">
+              <label class="container-checkbox">
+                <span>Thêm trân châu sương mai</span>
+                <input type="checkbox" name="topping" >
+                <span class="checkmark"></span>
+              </label>
+              <span class="topping-price">+ 6,000đ</span>
+            </div><div class="topping-wrap">
+              <label class="container-checkbox">
+                <span>Thêm Thạch Konjac</span>
+                <input type="checkbox" name="topping" >
+                <span class="checkmark"></span>
+              </label>
+              <span class="topping-price">+ 5,000đ</span>
+            </div><div class="topping-wrap">
+              <label class="container-checkbox">
+                <span>Thêm trân châu hoàng kim</span>
+                <input type="checkbox" name="topping" >
+                <span class="checkmark"></span>
+              </label>
+              <span class="topping-price">+ 5,000đ</span>
+            </div><div class="topping-wrap">
+              <label class="container-checkbox">
+                <span>Thêm Thạch Hoa Mộc Quế</span>
+                <input type="checkbox" name="topping">
+                <span class="checkmark"></span>
+              </label>
+              <span class="topping-price">+ 5,000đ</span>
+            </div></div>
+            </div>
+          </div>
+          </div>
         </div>
       </div>
+      <div class="overlay"></div>
     </div>
   <script src="./js/data.js" type="module"></script>
   <script src="./js/order.js" type="module"></script>
