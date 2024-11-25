@@ -84,15 +84,25 @@ function listFruits() {
         fruitPrice.textContent = fruit.price;
         fruitInfor.textContent = fruit.description || "Không có mô tả.";
         const addFruitCart = document.getElementById("add-fruit-cart");
-        addFruitCart.addEventListener("click", () => {
-          const itemId = drinkItem.getAttribute("data-id");
-          console.log("Thêm", {
-            itemId,
-            fruit,
-          });
+        // addFruitCart.addEventListener("click", () => {
+        //   const itemId = drinkItem.getAttribute("data-id");
+        //   console.log("Thêm", {
+        //     itemId,
+        //     fruit,
+        //   });
+        //   addToOrderList(itemId, fruit);
+        //   // popupWrapper.style.display = "none";
+        // });
+        // Xóa sự kiện cũ trước khi gắn sự kiện mới
+        const newHandler = () => {
+          const itemId = fruit.id;
+          console.log("Adding to cart:", fruit);
           addToOrderList(itemId, fruit);
-          // popupWrapper.style.display = "none";
-        });
+          popupWrapper.style.display = "none"; // Đóng popup
+          addFruitCart.removeEventListener("click", newHandler); // Loại bỏ sự kiện sau khi click
+        };
+
+        addFruitCart.addEventListener("click", newHandler);
         // Đóng popup khi nhấn nút close
         const closeButton = document.getElementById("close-btn");
         closeButton.addEventListener("click", () => {
